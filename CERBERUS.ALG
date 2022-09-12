@@ -1,0 +1,128 @@
+Algoritmo "Cerberus"
+
+
+
+Var
+
+prova, forum, engajamento, avaliacao, x: inteiro
+nota: real
+y: logico
+
+Inicio
+
+ESCREVA ("Olá, seja bem vindo(a) ao portal de média da Anhanguera!")
+TIMER 1000
+   PARA X DE 1 ATE 1 FACA
+      ESCREVA ("     Clique em ENTER para avançar.")
+         FIMPARA
+            LEIA (y)
+LIMPATELA
+   TIMER 500
+      PARA X DE 1 ATE 1 FACA
+         ESCREVA ("loading...")
+            FIMPARA
+LIMPATELA
+
+// Campo da Prova
+REPITA
+   ESCREVA ("Digite a nota da prova: ")
+      LEIA (prova)
+LIMPATELA
+   SE (prova < 500) OU (prova > 5000) ENTAO
+      ESCREVA ("Ops, digite um valor válido.")
+         SENAO
+            FIMSE
+LIMPATELA
+   ATE (prova >= 500) E (prova <= 5000)
+              SE (prova <= 2500) ENTAO
+                 ESCREVA ("Iiiih não estudou nada emm.")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+              SE (prova > 2500) E (prova <= 3500) ENTAO
+                 ESCREVA ("Poderia ser melhor, vagabundo!")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+              SE (prova > 3500) ENTAO
+                 ESCREVA ("Fez mais que sua obrigação, ruimzão!")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+                          
+// Campo do Fórum
+REPITA
+   ESCREVA ("Digite a nota do fórum: ")
+      LEIA (forum)
+LIMPATELA
+   SE (forum < 500) OU (forum > 1000) ENTAO
+      ESCREVA ("Ops, digite um valor válido.")
+         SENAO
+            FIMSE
+LIMPATELA
+   ATE (forum >= 500) E (forum <= 1000 )
+              SE (forum <= 500) ENTAO
+                 ESCREVA ("Até aqui tira nota ruim? JESUS...")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+              SE (forum > 500) ENTAO
+                 ESCREVA ("Até minha avó faz nota boa aqui.")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+                          
+// Campo do Engajamento
+REPITA
+   ESCREVA ("Digite a nota do engajamento: ")
+      LEIA (engajamento)
+LIMPATELA
+   SE (engajamento < 500) OU (engajamento > 3000) ENTAO
+      ESCREVA ("Ops, digite um valor válido.")
+         SENAO
+            FIMSE
+LIMPATELA
+   ATE (engajamento >= 500) E (engajamento <= 3000)
+              SE (engajamento <= 2000) ENTAO
+                 ESCREVA ("Só isso?")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+              SE (engajamento > 2000) ENTAO
+                 ESCREVA ("De graça, até meu avô pontua.")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+                          
+//Campo da Avaliação
+REPITA
+   ESCREVA ("Digite a nota da avaliação: ")
+      LEIA (avaliacao)
+LIMPATELA
+   SE (avaliacao < 500) OU (avaliacao > 3000) ENTAO
+      ESCREVA ("Ops, digite um valor válido.")
+         SENAO
+            FIMSE
+LIMPATELA
+   ATE (avaliacao >= 500) E (avaliacao <= 3000)
+              SE (avaliacao <= 1800) ENTAO
+                 ESCREVA ("Iiiih não estudou nada emm.")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+              SE (avaliacao > 1800) ENTAO
+                 ESCREVA ("Fez mais que sua obrigação, ruimzão!")
+                    SENAO
+                       FIMSE
+                          LIMPATELA
+                          
+// Fórmula
+nota <- prova+forum+engajamento+avaliacao/1000
+LIMPATELA
+   SE nota >= 7 ENTAO
+      ESCREVA ("Parabéns, você foi aprovado com:", nota)
+         SENAO
+            ESCREVA ("Parabéns, você foi reprovado. LIXO!")
+               FIMSE
+
+FIMALGORITMO
